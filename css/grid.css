@@ -1,0 +1,400 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+ margin-bottom: 1rem;
+    margin-top: 2.5rem;
+}
+
+p{
+    margin-bottom: 1.5rem;
+}
+
+.align-center{
+    text-align: center;
+}
+
+/* Desktop */
+.grillaIndex{
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "main aside"
+    "footer footer";
+    grid-template-columns: 75% 25%;
+}
+
+.grilla{
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "main main"
+    "footer footer";
+    grid-template-columns: auto;
+}
+
+header{
+    display: grid;
+    grid-area: header;
+    background-color: #000;
+}
+
+footer{
+    display: grid;
+    grid-area: footer;
+    padding: 1rem;
+    background-color: #000;
+    color: white;
+}
+
+aside{
+    display: grid;
+    grid-area: aside;
+}
+
+main{
+    display: grid;
+    grid-area: main;
+}
+
+aside .formContacto{
+    width: 100%;
+    background-color: #fff;
+    color: #000;
+}
+
+.formContacto .container {
+    position: sticky;
+    top: 20px;
+}
+
+.header__logo img{
+    max-width:125px;
+}
+
+.header__nav ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.header__nav ul li {
+    margin: 7px;
+}
+
+.header__nav ul li a{
+    color:white;
+    text-transform: uppercase;
+}
+
+.container{
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.footer .container{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.header .container{
+    display: flex;
+    align-items: center;
+}
+
+.footer__section--ubicacion iframe{
+    width: 100%;
+    height: auto;
+}
+
+.banner, .bannerCerdo, .bannerVacuno, .bannerEmbutidos {
+    color: white;
+    width: 100%;
+    height: 100vh;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    flex-direction: column;
+    background-color: rgb(50, 50, 50);
+    background-blend-mode: soft-light;
+}
+
+.banner{
+    background-image: url('/images/banner.jpg');
+}
+
+.bannerCerdo, .bannerVacuno, .bannerEmbutidos {
+    background-image: url('../images/asd.jpg');
+}
+
+.banner a, .bannerCerdo a, .bannerVacuno a, .bannerEmbutidos a {
+    background: #000;
+    padding: 17px 40px;
+    line-height: 21px;
+    font-size: 18px;
+    color: white;
+    width: 180px;
+    margin:15px 0;
+}
+
+.banner h1, .bannerCerdo h1, .bannerVacuno h1, .bannerEmbutidos h1{
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: 0px;
+    font-style: normal;
+}
+
+.formContacto {
+    text-align: center;
+    width: 25%;
+    margin: 0 auto;
+    color: white;
+    background: #26282c;
+}
+
+.formContacto .form__divs{
+    margin:15px;
+}
+
+.form__divs input, .form__divs label {
+    margin: 5px;
+}
+
+.inputBotones {
+    background-color: #000;
+    padding: 15px;
+    color: #fff;
+    border:none;
+    margin: 0 5px;
+}
+
+.inputDatos {
+    padding: 7px;
+}
+
+.form__divs--datos {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    margin: 0 auto;
+}
+
+.form__divs--datos input{
+    margin:7px;
+}
+
+.procesos__div {
+    display: flex;
+    width: 100%;
+}
+
+.procesos {
+    padding: 15px;
+}
+
+.procesos__div--columnas {
+    height: auto;
+    color:#000;
+    box-sizing: border-box;
+    position: relative;
+    margin: 0px 10px;
+    padding: 30px;
+    width: calc(33.33%);
+    border: 1px solid #000;
+    border-radius: 10px;
+}
+
+.procesos__div h2{
+    text-align: center;
+    font-size: 22px;
+    font-weight: 600;
+    color: #576975;
+    margin-top: 1.5rem;
+}
+
+.clientes {
+    max-width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.clientes__div {
+    height: auto;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.clientes__div img{
+    height: 85px;
+    padding: 5px 5px 5px 5px;
+    margin: 0 25px 0 25px;
+}
+
+.nosotros {
+    text-align: center;
+    width: 100%;
+    padding: 15px;
+}
+
+.historia{
+    flex-wrap: wrap;
+    text-align: center;
+    padding: 15px;
+    background-color: #26282c;
+}
+
+.historia h2{
+    color: #fff;
+}
+
+.historia__div{
+    border-radius: 10px;
+    margin: 15px auto;
+    padding: 15px;
+    width: 600px;
+    height: 300px;
+    background-color: #fff;
+}
+
+.historia__div h3{
+    margin-top:0;
+}
+
+.contactoFlex{
+    display: flex;
+    width: 100%;
+}
+
+.contactoFlex section{
+    width: 50%;
+}
+
+.productos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.productos img{
+    margin: 15px;
+}
+
+
+/* Mobile */
+@media (min-width:48rem) and (max-width:71.25rem){
+    aside{
+        display: none;
+    }
+
+    .grilla{
+        grid-template-areas: 
+        "header"
+        "main"
+        "footer";
+        grid-template-columns: auto;
+    }
+
+    .grillaIndex{
+        grid-template-areas: 
+        "header"
+        "main"
+        "aside"
+        "footer";
+        grid-template-columns: auto;
+    }}
+
+/* Tableta */
+@media (max-width:48rem){
+.grilla{
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+    grid-template-columns: auto;
+}
+
+.grillaIndex{
+    grid-template-areas: 
+    "header"
+    "main"
+    "aside"
+    "footer";
+    grid-template-columns: auto;
+}
+
+aside{
+    display: none;
+}
+
+.footer .container{
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+.header .container{
+   flex-direction: column;
+}
+
+.banner, .bannerCerdo, .bannerVacuno, .bannerEmbutidos {
+    padding: 15px;
+    align-items: center;
+    text-align: center;
+}
+
+.formContacto {
+    text-align: center;
+    width: 25%;
+    margin: 0 auto;
+    color: white;
+    background: #26282c;
+}
+
+.procesos__div {
+    flex-direction: column;
+}
+
+.procesos__div--columnas {
+    width: 100%;
+    margin:7px 0;
+}
+
+.clientes__div img{
+    height: auto;
+    width: 200px;
+}
+
+.nosotros {
+    text-align: center;
+    width: 100%;
+    padding: 15px;
+}
+
+.contactoFlex{
+   flex-direction: column;
+}
+
+.contactoFlex section{
+    width: 100%;
+}
+
+.productos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.productos img{
+    margin: 15px;
+}}
+
