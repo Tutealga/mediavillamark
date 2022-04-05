@@ -128,7 +128,7 @@ aside .formContacto{
 }
 
 .banner{
-    background-image: url('/images/banner.jpg');
+    background-image: url('images/banner.jpg');
 }
 
 .bannerCerdo, .bannerVacuno, .bannerEmbutidos {
