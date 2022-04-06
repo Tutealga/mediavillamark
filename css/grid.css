@@ -198,6 +198,7 @@ aside .formContacto{
 
 .procesos {
     padding: 15px;
+    max-width: 100%;
 }
 
 .procesos__div--columnas {
@@ -247,10 +248,12 @@ aside .formContacto{
 }
 
 .historia{
-    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
     text-align: center;
     padding: 15px;
     background-color: #26282c;
+    max-width: 100%;
 }
 
 .historia h2{
@@ -289,32 +292,8 @@ aside .formContacto{
     margin: 15px;
 }
 
-
-/* Mobile */
-@media (min-width:48rem) and (max-width:71.25rem){
-    aside{
-        display: none;
-    }
-
-    .grilla{
-        grid-template-areas: 
-        "header"
-        "main"
-        "footer";
-        grid-template-columns: auto;
-    }
-
-    .grillaIndex{
-        grid-template-areas: 
-        "header"
-        "main"
-        "aside"
-        "footer";
-        grid-template-columns: auto;
-    }}
-
-/* Tableta */
-@media (max-width:48rem){
+/* Responsive */
+@media (max-width:71.25rem){
 .grilla{
     grid-template-areas: 
     "header"
@@ -396,5 +375,10 @@ aside{
 
 .productos img{
     margin: 15px;
-}}
+}
+
+.historia__div{
+        width: 100%;
+        height: auto;
+    }}
 
