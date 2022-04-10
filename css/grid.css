@@ -134,18 +134,54 @@ aside .formContacto{
     background-image: url('../images/banner.jpg');
 }
 
-.bannerCerdo, .bannerVacuno, .bannerEmbutidos {
-    background-image: url('../images/asd.jpg');
+.bannerCerdo {
+    background-image: url('../images/carne-cerdo.jpg');
+}
+.bannerEmbutidos {
+    background-image: url('../images/achuras.jpg');
+}
+.bannerVacuno{
+    background-image: url('../images/vacuno.jpg');
 }
 
 .banner a, .bannerCerdo a, .bannerVacuno a, .bannerEmbutidos a {
-    background: #000;
+    background: #eb1b23;
     padding: 17px 40px;
     line-height: 21px;
     font-size: 18px;
     color: white;
     width: 180px;
     margin:15px 0;
+}
+
+input.inputDatos:focus {
+    transform: scale(1.05);
+    transition: .5s;
+}
+
+.procesos__div--columnas:hover {
+    box-shadow: 0 15px 45px rgb(0 0 0 / 10%);
+    border: transparent;
+    transition: .3s;
+}
+
+.banner a:hover, .bannerCerdo a:hover, .bannerVacuno a:hover, .bannerEmbutidos a:hover {
+    background:transparent;
+    color: #eb1b23;
+    border: 1px solid #eb1b23;
+    transition: .5s;
+}
+
+.header__nav ul li a:hover{
+    color: #eb1b23;
+    transition: .5s;
+}
+
+.inputBotones:hover{
+    background-color: transparent;
+    transition: .5s;
+    color: #eb1b23;
+    border: 1px solid #eb1b23;
 }
 
 .banner h1, .bannerCerdo h1, .bannerVacuno h1, .bannerEmbutidos h1{
