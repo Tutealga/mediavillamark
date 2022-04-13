@@ -5,135 +5,136 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Frigorifico en Argentina - Mediavilla Mark</title>
-    <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
 <body>
-<div class="grillaIndex">
-<header class="header">
-    <div class="container">
-        <div class="header__logo">
-            <a href="index.html"><img src="images/logo.png" alt="Logo"></a>
-        </div> 
-    <nav class="header__nav">
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-                <li><a href="pages/vacuna.html">Vacuno</a></li>
-                <li><a href="pages/cerdo.html">Cerdo</a></li>
-                <li><a href="pages/embutidos.html">Embutidos</a></li>
-                <li><a href="pages/contacto.html">Contacto</a></li>
+<header class="container-fluid bg-black text-center">
+    <div class="container d-flex flex-wrap justify-content-center align-items-center">
+            <a class="col-12 col-md-2" href="index.html"><img width="150px" src="images/logo.png" alt="Logo"></a>
+        <ul class="list-unstyled col-12 col-md-10 d-flex flex-wrap">
+            <li class="mx-4"><a class="text-decoration-none text-white" href="index.html">Inicio</a></li>
+            <li class="mx-4"><a class="text-decoration-none text-white" href="pages/vacuna.html">Vacuno</a></li>
+            <li class="mx-4"><a class="text-decoration-none text-white" href="pages/cerdo.html">Cerdo</a></li>
+            <li class="mx-4"><a class="text-decoration-none text-white" href="pages/embutidos.html">Embutidos</a></li>
+            <li class="mx-4"><a class="text-decoration-none text-white" href="pages/contacto.html">Contacto</a></li>
         </ul>
-    </nav>
     </div>
 </header>
 
-<main>
-    <section class="banner">
+    <section style="background-position: center; background-size: cover; background-image: url('images/banner.jpg'); height: 100vh;" class="container-fluid d-flex flex-column p-5 justify-content-center align-items-center text-white">
             <h1>Distribuidores de carne:<br>Venta de carne al por mayor</h1>
-            <a href="pages/contacto.html">Contáctanos</a>
+            <button type="button" href="pages/contacto.html" class="btn btn-dark">Contáctanos</button>
     </section>   
      
-    <section class="procesos">
-        <h2 class="align-center">Procesos</h2>
-        <p class="align-center">Estamos integrados en las etapas de:</p>
-        <div class="procesos__div">
-                <div class="procesos__div--columnas">
-                <h2>Compra de hacienda</h2>
-                    <p>Vinculos comerciales de muchos años con gran cantidad de productores de la Pampa Argentina, lo que nos ha permitido crecer como empresa proveedora de carnes de razas británicas tales como Aberdeen Angus y Hereford, de características de alta calidad y excelente marmolado interno. Esto nos permite ofrecer a nuestros clientes cortes vacunos de intenso sabor y excepcional terneza.</p>
+    <section class="container text-center my-4">
+            <h2>Procesos</h2>
+        <p>Estamos integrados en las etapas de:</p>
+        <div class="d-flex flex-wrap">
+                <div class="card col-md-4">
+                    <div class="card-body">
+                        <h3 class="card-title">Compra de hacienda</h3>
+                        <p class="card-text">Vinculos comerciales de muchos años con gran cantidad de productores de la Pampa Argentina, lo que nos ha permitido crecer como empresa proveedora de carnes de razas británicas tales como Aberdeen Angus y Hereford, de características de alta calidad y excelente marmolado interno. Esto nos permite ofrecer a nuestros clientes cortes vacunos de intenso sabor y excepcional terneza.</p>
+                      </div>
             </div>
-            <div class="procesos__div--columnas">
-                <h2>Sanidad e inocuidad</h2>
-                <p>Faena en establecimientos con los más exigentes estándares de sanidad e inocuidad, habilitados por Senasa Argentina.</p>
+            <div class="card col-md-4">
+                <div class="card-body">
+                    <h3 class="card-title">Sanidad e inocuidad</h3>
+                    <p class="card-text">Faena en establecimientos con los más exigentes estándares de sanidad e inocuidad, habilitados por Senasa Argentina.</p>
+                  </div>
         </div>
-        <div class="procesos__div--columnas">
-                <h2>Trabajo de la carne</h2>
-                <p>Realizando el proceso de desposte, elaboración y envasado de los cortes vacunos en nuestro establecimiento habilitado por Senasa Argentina, donde se realiza todo mediante estrictos métodos de calidad y sanidad, excelente utilización de la cadena de frio, aplicando técnicas modernas de control de procesos y puntos críticos Hazard.</p>
+        <div class="card col-md-4">
+            <div class="card-body">
+                <h3 class="card-title">Trabajo de la carne</h3>
+                <p class="card-text">Realizando el proceso de desposte, elaboración y envasado de los cortes vacunos en nuestro establecimiento habilitado por Senasa Argentina, donde se realiza todo mediante estrictos métodos de calidad y sanidad, excelente utilización de la cadena de frio, aplicando técnicas modernas de control de procesos y puntos críticos Hazard.</p>
+              </div>
         </div>
             </div>
     </section>  
     
-    <section class="clientes">
-        <h2 class="align-center">Clientes</h2>
-            <div class="clientes__div">
-                <img src="images/dia.png">
-                <img src="images/gamar.png">
-                <img src="images/Sin-titulo-1.png">
-                <img src="images/unnamed-1.png">
-                <img src="images/unnamed-2.png">
-                <img src="images/unnamed.png">
+    <section class="container-fluid my-4">
+        <h2 class="text-center">Clientes</h2>
+            <div class="container-fluid d-flex flex-wrap align-items-center">
+                <img class="mx-3 p-1" style="height: 85px;" src="images/dia.png">
+                <img class="mx-3 p-1" style="height: 85px;" src="images/gamar.png">
+                <img class="mx-3 p-1" style="height: 85px;" src="images/Sin-titulo-1.png">
+                <img class="mx-3 p-1" style="height: 85px;" src="images/unnamed-1.png">
+                <img class="mx-3 p-1" style="height: 85px;" src="images/unnamed-2.png">
+                <img class="mx-3 p-1" style="height: 85px;" src="images/unnamed.png">
                 </div>	
     </section>   
     
-    <section class="historia">
-        <h2 class="align-center">Nuestra Historia</h2>
-        <div class="historia__div">
-            <h3>Lorem ipsum dolor sit.</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem modi nobis, et perferendis assumenda consectetur illo, aut numquam, repellendus mollitia recusandae necessitatibus iusto possimus atque consequuntur corporis fugit ad blanditiis.
-        Assumenda quos ducimus suscipit. Dolore facilis veniam beatae officiis expedita! Voluptatum corporis nihil omnis enim quidem adipisci dolor quam? Vitae similique reprehenderit neque, laboriosam facilis animi non hic nesciunt fuga.
-        Recusandae voluptas excepturi, ullam, porro, unde sit enim tempora eos exercitationem qui ea. Placeat possimus tempora ratione aperiam illum? Laboriosam dolor tenetur ipsa fugiat quaerat assumenda architecto expedita cumque nemo.</p>
+    <section class="container-fluid bg-dark p-4">
+        <div class="container text-center">
+            <h2 class="text-white">Nuestra Historia</h2>
+            <div class="card card-body m-3">
+                <h3 class="card-title">Lorem ipsum dolor sit.</h3>
+            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem modi nobis, et perferendis assumenda consectetur illo, aut numquam, repellendus mollitia recusandae necessitatibus iusto possimus atque consequuntur corporis fugit ad blanditiis.
+            Assumenda quos ducimus suscipit. Dolore facilis veniam beatae officiis expedita! Voluptatum corporis nihil omnis enim quidem adipisci dolor quam? Vitae similique reprehenderit neque, laboriosam facilis animi non hic nesciunt fuga.
+            Recusandae voluptas excepturi, ullam, porro, unde sit enim tempora eos exercitationem qui ea. Placeat possimus tempora ratione aperiam illum? Laboriosam dolor tenetur ipsa fugiat quaerat assumenda architecto expedita cumque nemo.</p>
+        </div>
+    <div class="card card-body m-3">
+<h3 class="card-title">Lorem, ipsum.</h3>
+    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos exercitationem maxime perferendis corrupti ab unde qui, rerum placeat ullam commodi sed aperiam maiores vero temporibus molestias beatae error eveniet laudantium.
+    Exercitationem, officia blanditiis, perspiciatis tenetur deserunt doloremque tempore ad fugit, impedit esse vel facere voluptas! Eos blanditiis nihil vel, assumenda dicta consequatur omnis eaque beatae consectetur fugiat explicabo minima provident.
+    Magnam dolores dolorem fugiat ut sunt atque omnis quibusdam laboriosam voluptatibus suscipit! Sint, necessitatibus debitis maiores distinctio eius, iure nemo tempore exercitationem tenetur quas dicta! Provident vitae illum officia facilis!
+    Quaerat, magnam. Doloribus ipsum sed ad, consectetur ratione alias necessitatibus asperiores adipisci consequatur inventore sequi dolore quia aliquid eligendi nesciunt laboriosam delectus magni iusto, deleniti fugit itaque dolorem ullam aliquam?</p>
     </div>
-        <div class="historia__div">
-<h3>Lorem, ipsum.</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos exercitationem maxime perferendis corrupti ab unde qui, rerum placeat ullam commodi sed aperiam maiores vero temporibus molestias beatae error eveniet laudantium.
-        Exercitationem, officia blanditiis, perspiciatis tenetur deserunt doloremque tempore ad fugit, impedit esse vel facere voluptas! Eos blanditiis nihil vel, assumenda dicta consequatur omnis eaque beatae consectetur fugiat explicabo minima provident.
-        Magnam dolores dolorem fugiat ut sunt atque omnis quibusdam laboriosam voluptatibus suscipit! Sint, necessitatibus debitis maiores distinctio eius, iure nemo tempore exercitationem tenetur quas dicta! Provident vitae illum officia facilis!
-        Quaerat, magnam. Doloribus ipsum sed ad, consectetur ratione alias necessitatibus asperiores adipisci consequatur inventore sequi dolore quia aliquid eligendi nesciunt laboriosam delectus magni iusto, deleniti fugit itaque dolorem ullam aliquam?</p>
+    <div class="card card-body m-3">
+<h3 class="card-title">Lorem, ipsum dolor.</h3>
+    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut inventore corporis sequi facere veritatis. Consectetur distinctio voluptates architecto, culpa eaque saepe suscipit dolores, magni optio ipsum quam, sunt quis neque.
+    Nam iste illum, ad temporibus maxime, dignissimos id beatae, culpa voluptatibus eveniet facere deleniti quia tempora harum veritatis doloremque? Excepturi itaque fuga impedit? Iusto a necessitatibus ab? Eligendi, facere similique.</p>
+    </div>
         </div>
-        <div class="historia__div">
-<h3>Lorem, ipsum dolor.</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut inventore corporis sequi facere veritatis. Consectetur distinctio voluptates architecto, culpa eaque saepe suscipit dolores, magni optio ipsum quam, sunt quis neque.
-        Nam iste illum, ad temporibus maxime, dignissimos id beatae, culpa voluptatibus eveniet facere deleniti quia tempora harum veritatis doloremque? Excepturi itaque fuga impedit? Iusto a necessitatibus ab? Eligendi, facere similique.</p>
-        </div>
-        
-        
-        
     </section>
-</main>
 
-<aside>
-    <section class="formContacto">
-        <div class="container">
-            <h1>Contactanos</h1>
-        <form method="post" action="">
-            <div class="form__divs--datos">
-                <input class="inputDatos" type="text" placeholder="Nombre" name="nombre">
-                <input class="inputDatos" type="email" placeholder="Correo electronico" name="gmail">
-            </div>
-            <div class="form__divs"><label for="estado">Soy:</label><select name="estado" id="">
-            <option value="Empresa">Empresa</option>
-            <option value="Particular">Particular</option>
-        </select></div>
-            <div class="form__divs"><label for="">¡Quiero recibir ofertas semanales!</label><input type="checkbox" name="" id=""></div>
-            <div class="form__divs"><label for="">Dejar comentario:</label></br><textarea name="" id="" cols="30" rows="10"></textarea></div>
-            <div><input class="inputBotones" value="Enviar formulario" type="submit">
-        <input class="inputBotones" value="Borrar formulario" type="reset"></div>
-        </form> 
+<section class="container-fluid row justify-content-center">
+    <div class="col-md-4 text-center py-5">
+    <h1>Contactanos</h1>
+    <form>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          </div>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Correo electrónico</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
         </div>
-         
-    </section>
-</aside>
+        <div class="mb-3 form-check">
+            <label class="form-check-label" for="exampleCheck1">¡Quiero recibir las ofertas semanales</label><input type="checkbox" class="form-check-input" id="exampleCheck1">
+        </div>
+        <div class="mb-3">
+            <select class="form-select" aria-label="Default select example">
+                <option value="1">Empresa</option>
+                <option value="2">Particular</option>
+              </select>
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Mensaje</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          </div>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+      </form>
+    </div>
+</section>
 
-<footer class="footer">
-    <div class="container">
-         <div class="footer__section">
+<footer class="container-fluid bg-black text-white">
+    <div class="container d-flex flex-wrap p-5">
+         <div class="col-md-4 col-12">
         <h3>Contacto</h3>
 <p>Teléfono: +549 11 3118 2056</p>
 <p>E-mail: mediavillamarkarg@gmail.com</p>
 <p>Añasco 17, Lomas del Mirador, La Matanza, Buenos Aires, Argentina</p>
     </div>
-    <div class="footer__section">
+    <div class="col-md-4 col-12">
         <h3>Seguinos</h3>
-        <div class="footer__section--redes"> 
-          </div>
     </div>
-    <div class="footer__section--ubicacion">
+    <div class="col-md-4 col-12">
         <h3>Ubicacion</h3>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13123.438843351403!2d-58.515150999999996!3d-34.68349!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc8da31fb3d69%3A0x3de0d3a172b69ee7!2sA%C3%B1asco%2017%2C%20B1751AGA%20La%20Tablada%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1647461386888!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <iframe class="ratio" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13123.438843351403!2d-58.515150999999996!3d-34.68349!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc8da31fb3d69%3A0x3de0d3a172b69ee7!2sA%C3%B1asco%2017%2C%20B1751AGA%20La%20Tablada%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1647461386888!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </div>
     </div>
    
 </footer>
-</div>
-
 
 </body>
 </html>
