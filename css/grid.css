@@ -21,15 +21,6 @@ p{
 }
 
 /* Desktop */
-.grillaIndex{
-    display: grid;
-    grid-template-areas: 
-    "header header"
-    "main aside"
-    "footer footer";
-    grid-template-columns: 75% 25%;
-}
-
 .grilla{
     display: grid;
     grid-template-areas: 
@@ -43,7 +34,10 @@ header{
     display: grid;
     grid-area: header;
     background-color: #000;
+    z-index: 999;
+    width: 100%;
     max-width: 100%;
+    position: fixed;
 }
 
 footer{
@@ -55,21 +49,10 @@ footer{
     max-width: 100%;
 }
 
-aside{
-    display: grid;
-    grid-area: aside;
-}
-
 main{
     display: grid;
     grid-area: main;
     max-width: 100%;
-}
-
-aside .formContacto{
-    width: 100%;
-    background-color: #fff;
-    color: #000;
 }
 
 .formContacto .container {
@@ -104,6 +87,11 @@ aside .formContacto{
 .footer .container{
     display: flex;
     justify-content: space-evenly;
+    margin:0;
+}
+
+.footer .container a{
+    color: white;
 }
 
 .header .container{
@@ -154,6 +142,13 @@ aside .formContacto{
     margin:15px 0;
 }
 
+.banner h1, .bannerCerdo h1, .bannerVacuno h1, .bannerEmbutidos h1{
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: 0px;
+    font-style: normal;
+}
+
 input.inputDatos:focus {
     transform: scale(1.05);
     transition: .5s;
@@ -182,13 +177,6 @@ input.inputDatos:focus {
     transition: .5s;
     color: #eb1b23;
     border: 1px solid #eb1b23;
-}
-
-.banner h1, .bannerCerdo h1, .bannerVacuno h1, .bannerEmbutidos h1{
-    font-weight: 400;
-    line-height: 1.2;
-    letter-spacing: 0px;
-    font-style: normal;
 }
 
 .formContacto {
@@ -248,7 +236,7 @@ input.inputDatos:focus {
     margin: 0px 10px;
     padding: 30px;
     width: calc(33.33%);
-    border: 1px solid #000;
+    border: 2px solid #eb1b23;
     border-radius: 10px;
 }
 
@@ -272,6 +260,11 @@ input.inputDatos:focus {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+}
+
+.imgNosotros {
+        width: 75%;
+        height: auto;  
 }
 
 .clientes__div img{
@@ -327,8 +320,17 @@ input.inputDatos:focus {
     justify-content: center;
 }
 
-.productos img{
+.productos img {
     margin: 15px;
+    max-width: 100%;
+    width: 320px;
+    height: auto;
+}
+
+.productos img:hover{
+    cursor: pointer;
+    transition: 0.1s;
+    transform: scale(1.05);
 }
 
 /* Responsive */
@@ -349,21 +351,8 @@ input.inputDatos:focus {
     font-size: 14px;
 }
 
-.grillaIndex{
-    grid-template-areas: 
-    "header"
-    "main"
-    "aside"
-    "footer";
-    grid-template-columns: 100%;
-}
-
 .nosotros img{
     max-width: 100%;
-}
-
-aside{
-    display: none;
 }
 
 .footer .container{
@@ -445,6 +434,5 @@ aside{
 
     .nosotros img{
         max-width: 100%;
-    }
-}
+    }}
 
