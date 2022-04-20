@@ -1,0 +1,138 @@
+$rojologo: #eb1b23;
+$blanco: #fff;
+
+* {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+}
+
+.grilla{
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "main main"
+    "footer footer";
+    grid-template-columns: auto;
+}
+
+header{
+    display: grid;
+    grid-area: header;
+    background-color: #000;
+    z-index: 999;
+    width: 100%;
+    max-width: 100%;
+    position: fixed;
+}
+
+footer{
+    display: grid;
+    grid-area: footer;
+    padding: 1rem;
+    background-color: #000;
+    color: $blanco;
+    max-width: 100%;
+}
+
+main{
+    display: grid;
+    grid-area: main;
+    max-width: 100%;
+}
+
+.container{
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.header__logo{
+    img{
+    max-width:125px;
+}}
+
+.header__nav {
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+     li{
+        margin: 7px;
+        a{
+            color:$blanco;
+    text-transform: uppercase;
+    &:hover {
+        color: $rojologo;
+    transition: .5s;
+    }
+        }
+     }}}
+
+.footer{
+    .container{
+        display: flex;
+        justify-content: space-evenly;
+        margin:0;
+        a{
+            color: $blanco;
+        }
+    }
+    
+}
+
+.header{
+    .container{
+        display: flex;
+        align-items: center;
+    }
+    
+}
+
+/* Responsive */
+@media (max-width:71.25rem){
+    .grilla{
+        grid-template-areas: 
+        "header"
+        "main"
+        "footer";
+        grid-template-columns: 100%;
+    }
+    .header__logo{
+        img{
+        max-width: 100px;
+    }}
+    .header__nav ul li a{
+        ul{
+            li{
+                a{
+                    font-size: 14px; 
+                }
+            }
+        }
+    }
+    .footer{
+        .container{
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+        }
+        
+    }
+
+    .header{
+        .container{
+            flex-direction: column;
+        }
+        
+     }
+
+}
+
+@media (max-width: 267px){
+    .container{
+        padding: 0px;
+    }}
+    
