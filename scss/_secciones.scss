@@ -1,18 +1,19 @@
 $rojologo: #eb1b23;
 $blanco: #fff;
-$shadow: 0 15px 45px rgb(0, 0, 0 / 10%);
+$shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 
-.footer__section--ubicacion {
-    iframe{
-        width: 100%;
-        height: auto;
-    }
+
+/** MAP, GET-MAP Y EXTEND **/
+$backgroundimg: (Inicio:url("../images/banner.jpg"),Vacuno:url("../images/vacuno.jpg"),Cerdo:url("../images/carne-cerdo.jpg"),Embutidos:url("../images/achuras.jpg"));
+
+@mixin sizes($max-width, $height){
+    max-width: $max-width;
+    height: $height;
 }
 
-.banner, .bannerCerdo, .bannerVacuno, .bannerEmbutidos {
+.banner {
     color: $blanco;
-    max-width: 100%;
-    height: 100vh;
+    @include sizes(100%, 100vh);
     padding: 40px;
     display: flex;
     justify-content: center;
@@ -21,6 +22,7 @@ $shadow: 0 15px 45px rgb(0, 0, 0 / 10%);
     flex-direction: column;
     background-color: rgb(50, 50, 50);
     background-blend-mode: soft-light;
+    background-image: map-get($backgroundimg, Inicio);
     a{
      background: $rojologo;
      padding: 17px 40px;
@@ -44,18 +46,27 @@ $shadow: 0 15px 45px rgb(0, 0, 0 / 10%);
     }
 }
 
-.banner{
-    background-image: url('../images/banner.jpg');
+.bannerCerdo {
+    @extend .banner;
+    background-image: map-get($backgroundimg, Cerdo);
 }
 
-.bannerCerdo {
-    background-image: url('../images/carne-cerdo.jpg');
+.bannerVacuno {
+    @extend .banner;
+    background-image: map-get($backgroundimg, Vacuno);
 }
+
 .bannerEmbutidos {
-    background-image: url('../images/achuras.jpg');
+    @extend .banner;
+    background-image: map-get($backgroundimg, Embutidos);
 }
-.bannerVacuno{
-    background-image: url('../images/vacuno.jpg');
+
+
+.footer__section--ubicacion {
+    iframe{
+        width: 100%;
+        height: auto;
+    }
 }
 
 .historia{
@@ -90,10 +101,20 @@ $shadow: 0 15px 45px rgb(0, 0, 0 / 10%);
     }
 }
 
+.procesos__div {
+    display: flex;
+    width: 100%;
+}
+
 .productos{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    div {
+        width: calc(33.33%);
+        height: auto;
+        text-align: center;
+    }
     img {
         margin: 15px;
         max-width: 100%;
@@ -120,8 +141,8 @@ $shadow: 0 15px 45px rgb(0, 0, 0 / 10%);
     flex-wrap: wrap;
     img{
         height: 85px;
-        padding: 5px 5px 5px 5px;
-        margin: 0 25px 0 25px;
+        padding: 5px;
+        margin: 0 20px;
     }
 }
 
@@ -157,18 +178,8 @@ $shadow: 0 15px 45px rgb(0, 0, 0 / 10%);
     margin: 0px 10px;
     padding: 30px;
     width: calc(33.33%);
-    border: 2px solid $rojologo;
     border-radius: 10px;
-    &:hover {
-        box-shadow: $shadow;
-        border: transparent;
-        transition: .3s;
-    }
-}
-
-.procesos__div {
-    display: flex;
-    width: 100%;
+    box-shadow: $shadow;
 }
 
 .formContacto {
@@ -273,6 +284,9 @@ $shadow: 0 15px 45px rgb(0, 0, 0 / 10%);
         img{
             margin: 7px;
             max-width: 100%;
+        }
+        div {
+            width: 100%;
         }
     }
     
