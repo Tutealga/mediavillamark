@@ -20,7 +20,7 @@
                     <li><a href="../pages/vacuna.html">Vacuno</a></li>
                     <li><a href="../pages/cerdo.html">Cerdo</a></li>
                     <li><a href="../pages/embutidos.html">Embutidos</a></li>
-                    <li><a href="../pages/contacto.html">Contacto</a></li>
+                    <li><a class="contactoButton" href="../pages/contacto.html">Contacto</a></li>
             </ul>
         </nav>
         </div>
@@ -29,9 +29,7 @@
 <main>
     <div class="contactoFlex">
         <section class="nosotros">
-        <h2>Sobre Nosotros</h2>
-        <img class="imgNosotros" src="../images/asd.jpg" alt="">
-        <p>Mediavilla Mark, es una empresa de la industria frigorífica Argentina creada por integrantes de una familia con más de 50 años de trayectoria en la industria de la carne.</p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13123.438843351403!2d-58.515150999999996!3d-34.68349!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc8da31fb3d69%3A0x3de0d3a172b69ee7!2sA%C3%B1asco%2017%2C%20B1751AGA%20La%20Tablada%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1647461386888!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </section>
     
     <section class="formContacto">
@@ -41,12 +39,8 @@
                 <input class="inputDatos" type="text" placeholder="Nombre" name="nombre">
                 <input class="inputDatos" type="email" placeholder="Correo electronico" name="gmail">
             </div>
-            <div class="form__divs"><label for="estado">Soy:</label><select name="estado" id="">
-            <option value="Empresa">Empresa</option>
-            <option value="Particular">Particular</option>
-        </select></div>
-            <div class="form__divs"><label for="">¡Quiero recibir ofertas semanales!</label><input type="checkbox" name="" id=""></div>
-            <div class="form__divs"><label for="">Dejar comentario:</label></br><textarea name="" id="" cols="30" rows="10"></textarea></div>
+            <div class="form__divs">
+                <input class="inputDatos" type="text" placeholder="Asunto" name="asunto"></br><textarea name="" id="" cols="30" rows="10"></textarea></div>
             <div><input class="inputBotones" value="Enviar" type="submit">
     </div>
         </form>  

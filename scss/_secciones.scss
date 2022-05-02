@@ -69,30 +69,6 @@ $backgroundimg: (Inicio:url("../images/banner.jpg"),Vacuno:url("../images/vacuno
     }
 }
 
-.historia{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    padding: 15px;
-    background-color: #26282c;
-    max-width: 100%;
-    h2{
-        color: $blanco;
-    }
-}
-
-.historia__div{
-    border-radius: 10px;
-    margin: 15px auto;
-    padding: 15px;
-    width: 600px;
-    height: 300px;
-    background-color: $blanco;
-    h3{
-        margin-top:0;
-    }
-}
-
 .contactoFlex{
     display: flex;
     width: 100%;
@@ -118,7 +94,7 @@ $backgroundimg: (Inicio:url("../images/banner.jpg"),Vacuno:url("../images/vacuno
     img {
         margin: 15px;
         max-width: 100%;
-        width: 320px;
+        width: 200px;
         height: auto;
         &:hover{
             cursor: pointer;
@@ -131,7 +107,10 @@ $backgroundimg: (Inicio:url("../images/banner.jpg"),Vacuno:url("../images/vacuno
 .nosotros {
     text-align: center;
     width: 100%;
-    padding: 15px;
+    iframe {
+        width: 100%;
+        height: 100%;
+    }
 }
 
 .clientes__div {
@@ -139,6 +118,7 @@ $backgroundimg: (Inicio:url("../images/banner.jpg"),Vacuno:url("../images/vacuno
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+    margin: 15px;
     img{
         height: 85px;
         padding: 5px;
@@ -159,8 +139,9 @@ $backgroundimg: (Inicio:url("../images/banner.jpg"),Vacuno:url("../images/vacuno
 }
 
 .procesos {
-    padding: 15px;
+    padding: 50px;
     max-width: 100%;
+    background-color: rgba(96, 125, 139, 0.12);
     h2{
         text-align: center;
         font-size: 22px;
@@ -180,14 +161,19 @@ $backgroundimg: (Inicio:url("../images/banner.jpg"),Vacuno:url("../images/vacuno
     width: calc(33.33%);
     border-radius: 10px;
     box-shadow: $shadow;
+    text-align: center;
+    background-color: $blanco;
+    p{
+     font-size: 16px;
+    }
 }
 
 .formContacto {
     text-align: center;
-    width: 25%;
     margin: 0 auto;
     color: $blanco;
     background: #26282c;
+    padding: 50px;
     .form__divs{
         margin:15px;
         input,label {
@@ -228,14 +214,105 @@ $backgroundimg: (Inicio:url("../images/banner.jpg"),Vacuno:url("../images/vacuno
     }
 }
 
+.historia--punto {
+    position: absolute;
+    background: #fff;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    content: "";
+    display: block;
+    top: 28px;
+}
+
+.fecha {
+    color: $rojologo;
+}
+
+.historia {
+    width: 100%;
+    background-color: #26282c;
+    padding: 16px;
+    h2{
+        color: $blanco;
+    }
+    .historiaDiv {
+        max-width: 1080px;
+        margin: 50px auto;
+        position: relative;
+        .columna-2 {
+            justify-content: flex-end;
+            section {
+                &:before {
+                    left: -7px;
+                }
+                .historia--punto {
+                    left: -47px;
+                }
+            }
+        }
+        .historiaDiv--columna {
+            display: flex;
+            section {
+                background: #fff;
+                border-radius: 5px;
+                width: calc(50% - 40px);
+                padding: 20px;
+                position: relative;
+                .historia--detalles {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    .historia--titulo {
+                        font-size: 22px;
+                        font-weight: 600;
+                        color: #576975;
+                    }
+                }
+                p {
+                    margin: 10px 0 17px 0;
+                }
+                &:before {
+                    position: absolute;
+                    content: "";
+                    height: 15px;
+                    width: 15px;
+                    background: white;
+                    top: 28px;
+                    transform: rotate(45deg);
+                }
+            }
+        }
+        .columna-1 {
+            justify-content: flex-start;
+            section {
+                &:before {
+                    right: -7px;
+                }
+                .historia--punto {
+                    right: -47px;
+                }
+            }
+        }
+        .historia--linea {
+            position: absolute;
+            height: 70%;
+            width: 2px;
+            background: #fff;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 40px;
+        }
+    }
+}
+
 /* Responsive */
 @media (max-width:71.25rem){
     .nosotros {
         text-align: center;
         width: 100%;
-        padding: 15px;
-        img{
-            max-width: 100%;
+        iframe{
+            height: auto;
         }
     }
     
@@ -248,10 +325,10 @@ $backgroundimg: (Inicio:url("../images/banner.jpg"),Vacuno:url("../images/vacuno
     
     .formContacto {
         text-align: center;
-        width: 25%;
         margin: 0 auto;
         color: $blanco;
         background: #26282c;
+        padding: 15px;
     }
     
     .procesos__div {
@@ -271,7 +348,7 @@ $backgroundimg: (Inicio:url("../images/banner.jpg"),Vacuno:url("../images/vacuno
     }
      
     .contactoFlex{
-       flex-direction: column;
+       flex-direction: column-reverse;
        section{
         width: 100%;
     }
@@ -288,13 +365,42 @@ $backgroundimg: (Inicio:url("../images/banner.jpg"),Vacuno:url("../images/vacuno
         div {
             width: 100%;
         }
+    }}
+
+@media (max-width:48rem){
+    .historia{
+        .historiaDiv {
+            .historia--linea{
+                left: 18px;
+                height: 75%;
+            }
+            .columna-1 {
+                section{
+                    &:before {
+                left: -7px;
+            }}}
+            .historiaDiv--columna {
+                margin: 30px 0 3px 60px;
+                section {
+                    width: 100%;
+                    .historia--punto {
+                        left: -50px;
+                    }
+                }
+            }
+        }
+    }
+
+    .procesos{
+        padding: 15px;
+    }
+    .clientes__div{
+        padding: 0px;
+        justify-content: center;
     }
     
-    .historia__div{
-            width: 100%;
-            height: auto;
-        }}
-    
+}
+
     @media (max-width: 267px){
         .productos{
             img{
@@ -307,3 +413,27 @@ $backgroundimg: (Inicio:url("../images/banner.jpg"),Vacuno:url("../images/vacuno
                 max-width: 100%;
             }
         }}
+
+        @media (max-width:440px){
+           .historia{
+            .historiaDiv{
+                .historiaDiv--columna{
+                    margin: 10px 0;
+                    section{
+                        .historia--punto{
+                            display: none;
+                        }
+                        &:before{
+                            display: none;
+                        }
+                    }
+                }
+                .historia--linea{
+                    display: none;
+                }
+            }
+           }
+            
+        }
+
+        

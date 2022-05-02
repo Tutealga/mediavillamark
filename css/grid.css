@@ -6,6 +6,14 @@
   font-family: 'Montserrat', sans-serif;
   box-sizing: border-box; }
 
+a.contactoButton {
+  background: #eb1b23;
+  padding: 12px 18px; }
+  a.contactoButton:hover {
+    background-color: transparent;
+    color: #eb1b23;
+    border: 1px solid #eb1b23; }
+
 .grilla {
   display: grid;
   grid-template-areas: "header header" "main main" "footer footer";
@@ -15,10 +23,8 @@ header {
   display: grid;
   grid-area: header;
   background-color: #000;
-  z-index: 999;
   width: 100%;
-  max-width: 100%;
-  position: fixed; }
+  max-width: 100%; }
 
 footer {
   display: grid;
@@ -51,10 +57,9 @@ main {
   display: flex;
   flex-wrap: wrap; }
   .header__nav ul li {
-    margin: 7px; }
+    margin: 20px; }
     .header__nav ul li a {
-      color: #fff;
-      text-transform: uppercase; }
+      color: #fff; }
       .header__nav ul li a:hover {
         color: #eb1b23;
         transition: .5s; }
@@ -68,7 +73,9 @@ main {
 
 .header .container {
   display: flex;
-  align-items: center; }
+  align-items: center;
+  width: 100%;
+  justify-content: space-evenly; }
 
 /* Responsive */
 @media (max-width: 71.25rem) {
@@ -95,6 +102,9 @@ main {
 h1, h2, h3, h4, h5, h6 {
   margin-bottom: 1rem;
   margin-top: 2.5rem; }
+
+h1 {
+  font-size: 2em; }
 
 p {
   margin-bottom: 1.5rem;
@@ -161,26 +171,6 @@ h3.align-center {
   width: 100%;
   height: auto; }
 
-.historia {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  padding: 15px;
-  background-color: #26282c;
-  max-width: 100%; }
-  .historia h2 {
-    color: #fff; }
-
-.historia__div {
-  border-radius: 10px;
-  margin: 15px auto;
-  padding: 15px;
-  width: 600px;
-  height: 300px;
-  background-color: #fff; }
-  .historia__div h3 {
-    margin-top: 0; }
-
 .contactoFlex {
   display: flex;
   width: 100%; }
@@ -202,7 +192,7 @@ h3.align-center {
   .productos img {
     margin: 15px;
     max-width: 100%;
-    width: 320px;
+    width: 200px;
     height: auto; }
     .productos img:hover {
       cursor: pointer;
@@ -211,14 +201,17 @@ h3.align-center {
 
 .nosotros {
   text-align: center;
-  width: 100%;
-  padding: 15px; }
+  width: 100%; }
+  .nosotros iframe {
+    width: 100%;
+    height: 100%; }
 
 .clientes__div {
   height: auto;
   display: flex;
   align-items: center;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  margin: 15px; }
   .clientes__div img {
     height: 85px;
     padding: 5px;
@@ -235,8 +228,9 @@ h3.align-center {
   height: auto; }
 
 .procesos {
-  padding: 15px;
-  max-width: 100%; }
+  padding: 50px;
+  max-width: 100%;
+  background-color: rgba(96, 125, 139, 0.12); }
   .procesos h2 {
     text-align: center;
     font-size: 22px;
@@ -253,14 +247,18 @@ h3.align-center {
   padding: 30px;
   width: calc(33.33%);
   border-radius: 10px;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; }
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  text-align: center;
+  background-color: #fff; }
+  .procesos__div--columnas p {
+    font-size: 16px; }
 
 .formContacto {
   text-align: center;
-  width: 25%;
   margin: 0 auto;
   color: #fff;
-  background: #26282c; }
+  background: #26282c;
+  padding: 50px; }
   .formContacto .form__divs {
     margin: 15px; }
     .formContacto .form__divs input, .formContacto .form__divs label {
@@ -292,14 +290,83 @@ input.inputDatos {
   .form__divs--datos input {
     margin: 7px; }
 
+.historia--punto {
+  position: absolute;
+  background: #fff;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  content: "";
+  display: block;
+  top: 28px; }
+
+.fecha {
+  color: #eb1b23; }
+
+.historia {
+  width: 100%;
+  background-color: #26282c;
+  padding: 16px; }
+  .historia h2 {
+    color: #fff; }
+  .historia .historiaDiv {
+    max-width: 1080px;
+    margin: 50px auto;
+    position: relative; }
+    .historia .historiaDiv .columna-2 {
+      justify-content: flex-end; }
+      .historia .historiaDiv .columna-2 section:before {
+        left: -7px; }
+      .historia .historiaDiv .columna-2 section .historia--punto {
+        left: -47px; }
+    .historia .historiaDiv .historiaDiv--columna {
+      display: flex; }
+      .historia .historiaDiv .historiaDiv--columna section {
+        background: #fff;
+        border-radius: 5px;
+        width: calc(50% - 40px);
+        padding: 20px;
+        position: relative; }
+        .historia .historiaDiv .historiaDiv--columna section .historia--detalles {
+          display: flex;
+          justify-content: space-between;
+          align-items: center; }
+          .historia .historiaDiv .historiaDiv--columna section .historia--detalles .historia--titulo {
+            font-size: 22px;
+            font-weight: 600;
+            color: #576975; }
+        .historia .historiaDiv .historiaDiv--columna section p {
+          margin: 10px 0 17px 0; }
+        .historia .historiaDiv .historiaDiv--columna section:before {
+          position: absolute;
+          content: "";
+          height: 15px;
+          width: 15px;
+          background: white;
+          top: 28px;
+          transform: rotate(45deg); }
+    .historia .historiaDiv .columna-1 {
+      justify-content: flex-start; }
+      .historia .historiaDiv .columna-1 section:before {
+        right: -7px; }
+      .historia .historiaDiv .columna-1 section .historia--punto {
+        right: -47px; }
+    .historia .historiaDiv .historia--linea {
+      position: absolute;
+      height: 70%;
+      width: 2px;
+      background: #fff;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 40px; }
+
 /* Responsive */
 @media (max-width: 71.25rem) {
   .nosotros {
     text-align: center;
-    width: 100%;
-    padding: 15px; }
-    .nosotros img {
-      max-width: 100%; }
+    width: 100%; }
+    .nosotros iframe {
+      height: auto; }
   .banner, .bannerCerdo, .bannerVacuno, .bannerEmbutidos, .bannerCerdo, .bannerVacuno, .bannerEmbutidos {
     align-items: center;
     text-align: center;
@@ -307,10 +374,10 @@ input.inputDatos {
     font-size: 14px; }
   .formContacto {
     text-align: center;
-    width: 25%;
     margin: 0 auto;
     color: #fff;
-    background: #26282c; }
+    background: #26282c;
+    padding: 15px; }
   .procesos__div {
     flex-direction: column; }
   .procesos__div--columnas {
@@ -320,7 +387,7 @@ input.inputDatos {
     height: auto;
     width: 200px; }
   .contactoFlex {
-    flex-direction: column; }
+    flex-direction: column-reverse; }
     .contactoFlex section {
       width: 100%; }
   .productos {
@@ -331,13 +398,38 @@ input.inputDatos {
       margin: 7px;
       max-width: 100%; }
     .productos div {
+      width: 100%; } }
+
+@media (max-width: 48rem) {
+  .historia .historiaDiv .historia--linea {
+    left: 18px;
+    height: 75%; }
+  .historia .historiaDiv .columna-1 section:before {
+    left: -7px; }
+  .historia .historiaDiv .historiaDiv--columna {
+    margin: 30px 0 3px 60px; }
+    .historia .historiaDiv .historiaDiv--columna section {
       width: 100%; }
-  .historia__div {
-    width: 100%;
-    height: auto; } }
+      .historia .historiaDiv .historiaDiv--columna section .historia--punto {
+        left: -50px; }
+  .procesos {
+    padding: 15px; }
+  .clientes__div {
+    padding: 0px;
+    justify-content: center; } }
 
 @media (max-width: 267px) {
   .productos img {
     max-width: 100%; }
   .nosotros img {
     max-width: 100%; } }
+
+@media (max-width: 440px) {
+  .historia .historiaDiv .historiaDiv--columna {
+    margin: 10px 0; }
+    .historia .historiaDiv .historiaDiv--columna section .historia--punto {
+      display: none; }
+    .historia .historiaDiv .historiaDiv--columna section:before {
+      display: none; }
+  .historia .historiaDiv .historia--linea {
+    display: none; } }
