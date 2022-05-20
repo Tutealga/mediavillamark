@@ -51,7 +51,7 @@ main {
   background-color: rgba(96, 125, 139, 0.12); }
 
 .header__logo img {
-  max-width: 125px; }
+  max-width: 150px; }
 
 .header__nav ul {
   display: flex;
@@ -63,6 +63,9 @@ main {
       .header__nav ul li a:hover {
         color: #eb1b23;
         transition: .5s; }
+
+.footer .container2 {
+  display: flex; }
 
 .footer .container {
   display: flex;
@@ -104,11 +107,14 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 2.5rem; }
 
 h1 {
-  font-size: 2em; }
+  font-size: 3em; }
 
 p {
   margin-bottom: 1.5rem;
   font-size: 18px; }
+
+.seleccionado {
+  color: #eb1b23 !important; }
 
 .align-center {
   text-align: center; }
@@ -117,13 +123,16 @@ h3.align-center {
   margin-top: 0; }
 
 .productos p {
-  padding: 0 50px; }
+  padding: 0 50px;
+  color: #bbb; }
 
 @media (max-width: 48rem) {
   .productos p {
     padding: 0 15px; }
   p {
-    font-size: 14px; } }
+    font-size: 14px; }
+  h1 {
+    font-size: 1.5em; } }
 
 /** MAP, GET-MAP Y EXTEND **/
 .banner, .bannerCerdo, .bannerVacuno, .bannerEmbutidos {
@@ -138,7 +147,7 @@ h3.align-center {
   flex-direction: column;
   background-color: #323232;
   background-blend-mode: soft-light;
-  background-image: url("../images/banner.jpg"); }
+  background-image: url("../images/flesh-gbfc13463e_1920.jpg"); }
   .banner a, .bannerCerdo a, .bannerVacuno a, .bannerEmbutidos a {
     background: #eb1b23;
     padding: 17px 40px;
@@ -159,17 +168,29 @@ h3.align-center {
     font-style: normal; }
 
 .bannerCerdo {
-  background-image: url("../images/carne-cerdo.jpg"); }
+  background-image: url("../images/skewer-ga9c42199d_1920.jpg"); }
 
 .bannerVacuno {
   background-image: url("../images/vacuno.jpg"); }
 
 .bannerEmbutidos {
-  background-image: url("../images/achuras.jpg"); }
+  background-image: url("../images/barbecue-ga2940bd99_1920.jpg"); }
 
 .footer__section--ubicacion iframe {
   width: 100%;
   height: auto; }
+
+.footer__section .footer__section--i {
+  display: flex;
+  flex-direction: column; }
+  .footer__section .footer__section--i i {
+    margin: .5rem 0px; }
+    .footer__section .footer__section--i i a {
+      font-weight: 400; }
+    .footer__section .footer__section--i i::before {
+      margin: 0px 10px;
+      font-size: 1rem;
+      color: #eb1b23; }
 
 .contactoFlex {
   display: flex;
@@ -186,9 +207,11 @@ h3.align-center {
   flex-wrap: wrap;
   justify-content: center; }
   .productos div {
-    width: calc(33.33%);
+    width: calc(31.89%);
     height: auto;
-    text-align: center; }
+    text-align: center;
+    margin: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; }
   .productos img {
     margin: 15px;
     max-width: 100%;
@@ -252,6 +275,9 @@ h3.align-center {
   background-color: #fff; }
   .procesos__div--columnas p {
     font-size: 16px; }
+  .procesos__div--columnas i {
+    color: #eb1b23;
+    font-size: 4rem; }
 
 .formContacto {
   text-align: center;
@@ -259,17 +285,23 @@ h3.align-center {
   color: #fff;
   background: #26282c;
   padding: 50px; }
+  .formContacto form {
+    max-width: 100%;
+    padding: 25px; }
   .formContacto .form__divs {
-    margin: 15px; }
-    .formContacto .form__divs input, .formContacto .form__divs label {
-      margin: 5px; }
+    margin: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; }
+    .formContacto .form__divs input {
+      width: 100%; }
 
 .inputBotones {
-  background-color: #000;
-  padding: 15px;
+  background-color: #eb1b23;
+  padding: 12px 18px;
   color: #fff;
-  border: none;
-  margin: 0 5px; }
+  border: none; }
   .inputBotones:hover {
     background-color: transparent;
     transition: .5s;
@@ -284,11 +316,11 @@ input.inputDatos {
 
 .form__divs--datos {
   display: flex;
-  flex-direction: column;
-  width: 250px;
-  margin: 0 auto; }
+  justify-content: center;
+  align-items: center; }
   .form__divs--datos input {
-    margin: 7px; }
+    margin: 15px;
+    width: 100%; }
 
 .historia--punto {
   position: absolute;
@@ -372,6 +404,8 @@ input.inputDatos {
     text-align: center;
     padding: 0;
     font-size: 14px; }
+    .banner h1, .bannerCerdo h1, .bannerVacuno h1, .bannerEmbutidos h1, .bannerCerdo h1, .bannerVacuno h1, .bannerEmbutidos h1 {
+      font-size: 24px; }
   .formContacto {
     text-align: center;
     margin: 0 auto;
@@ -383,6 +417,8 @@ input.inputDatos {
   .procesos__div--columnas {
     width: 100%;
     margin: 7px 0; }
+    .procesos__div--columnas i {
+      font-size: 1.5rem; }
   .clientes__div img {
     height: auto;
     width: 200px; }

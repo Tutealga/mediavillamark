@@ -4,12 +4,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1{
-    font-size: 2em;
+    font-size: 3em;
 }
 
 p{
     margin-bottom: 1.5rem;
     font-size: 18px;
+}
+
+.seleccionado {
+    color: #eb1b23 !important;
 }
 
 .align-center{
@@ -22,6 +26,7 @@ h3.align-center {
 
 .productos p {
     padding: 0 50px;
+    color: #bbb;
 }
 
 @media (max-width:48rem){
@@ -31,5 +36,10 @@ h3.align-center {
     p{
         font-size: 14px;
     }
+
+    h1{
+        font-size: 1.5em;
+    }
 }
+
 

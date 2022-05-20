@@ -4,7 +4,7 @@ $shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 
 
 /** MAP, GET-MAP Y EXTEND **/
-$backgroundimg: (Inicio:url("../images/banner.jpg"),Vacuno:url("../images/vacuno.jpg"),Cerdo:url("../images/carne-cerdo.jpg"),Embutidos:url("../images/achuras.jpg"));
+$backgroundimg: (Inicio:url("../images/flesh-gbfc13463e_1920.jpg"),Vacuno:url("../images/vacuno.jpg"),Cerdo:url("../images/skewer-ga9c42199d_1920.jpg"),Embutidos:url("../images/barbecue-ga2940bd99_1920.jpg"));
 
 @mixin sizes($max-width, $height){
     max-width: $max-width;
@@ -69,6 +69,24 @@ $backgroundimg: (Inicio:url("../images/banner.jpg"),Vacuno:url("../images/vacuno
     }
 }
 
+.footer__section {
+    .footer__section--i{
+        display: flex;
+    flex-direction: column;
+        i{
+            margin: .5rem 0px;
+            a{
+                font-weight: 400;
+            }
+          &::before{
+            margin: 0px 10px;
+            font-size: 1rem;
+            color: $rojologo;
+          }
+        }
+    }
+}
+
 .contactoFlex{
     display: flex;
     width: 100%;
@@ -87,9 +105,11 @@ $backgroundimg: (Inicio:url("../images/banner.jpg"),Vacuno:url("../images/vacuno
     flex-wrap: wrap;
     justify-content: center;
     div {
-        width: calc(33.33%);
+        width: calc(31.89%);
         height: auto;
         text-align: center;
+        margin: 10px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     }
     img {
         margin: 15px;
@@ -166,28 +186,39 @@ $backgroundimg: (Inicio:url("../images/banner.jpg"),Vacuno:url("../images/vacuno
     p{
      font-size: 16px;
     }
+    i {
+        color: $rojologo;
+        font-size: 4rem;
+    }
 }
 
 .formContacto {
+    form{
+        max-width: 100%;
+        padding: 25px;
+    }
     text-align: center;
     margin: 0 auto;
     color: $blanco;
     background: #26282c;
     padding: 50px;
     .form__divs{
-        margin:15px;
-        input,label {
-            margin: 5px;
+        margin: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+        input{
+            width: 100%;
         }
     }
 }
 
 .inputBotones {
-    background-color: #000;
-    padding: 15px;
+    background-color: $rojologo;
+    padding: 12px 18px;
     color: $blanco;
     border:none;
-    margin: 0 5px;
     &:hover{
         background-color: transparent;
         transition: .5s;
@@ -206,11 +237,11 @@ $backgroundimg: (Inicio:url("../images/banner.jpg"),Vacuno:url("../images/vacuno
 
 .form__divs--datos {
     display: flex;
-    flex-direction: column;
-    width: 250px;
-    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
     input{
-        margin:7px;
+        margin:15px;
+        width: 100%;
     }
 }
 
@@ -321,6 +352,9 @@ $backgroundimg: (Inicio:url("../images/banner.jpg"),Vacuno:url("../images/vacuno
         text-align: center;
         padding: 0;
         font-size: 14px;
+        h1 {
+            font-size: 24px;
+        }
     }
     
     .formContacto {
@@ -336,6 +370,9 @@ $backgroundimg: (Inicio:url("../images/banner.jpg"),Vacuno:url("../images/vacuno
     }
     
     .procesos__div--columnas {
+        i{
+            font-size: 1.5rem;  
+        }
         width: 100%;
         margin:7px 0;
     }
